@@ -32,7 +32,7 @@ public class Container {
     }
 
     public double getAmount() {
-        return this.x;
+        return x;
     }
 
     /**
@@ -64,16 +64,16 @@ public class Container {
                 //将g[i]添加到c.g[j]组中
                 c.g[j].g[c.n+i] = g[i];
             }
-            n += c.n;
+        }
 
-            for (Container container : g){
-                if (container == null) {
-                    break;
-                }
-                container.n = n;
-                container.x = z;
+        n += c.n;
+
+        for (Container container : g){
+            if (container == null) {
+                break;
             }
-
+            container.n = n;
+            container.x = z;
         }
 
     }
