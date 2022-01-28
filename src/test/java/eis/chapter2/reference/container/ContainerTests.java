@@ -1,29 +1,24 @@
-package eis.chapter1.novice.container;
+package eis.chapter2.reference.container;
 
+import eis.chapter1.novice.container.ContainerApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ContainerApplicationTests {
+/**
+ * @author by zhangyuhang
+ * @Classname ContainerTests
+ * @Description TODO
+ * @Date 2022/1/28 17:05
+ */
+@SpringBootTest(classes = ContainerApplication.class)
+public class ContainerTests {
 
     @Test
     void contextLoads() {
     }
 
     @Test
-    void containerTest(){
-        Container a = new Container();
-        Container b = new Container();
-        Container c = new Container();
-        a.addWater(8.0);
-        a.connectTo(b);
-        b.connectTo(c);
-        System.out.println(a.x);
-
-    }
-
-    @Test
-    void containerReferenceTest(){
+    void testContainer(){
         Container a = new Container();
         Container b = new Container();
         Container c = new Container();
@@ -32,6 +27,7 @@ class ContainerApplicationTests {
         a.addWater(12);
         d.addWater(8);
         a.connectTo(b);
+
         System.out.println(a.getAmount()+" "+b.getAmount()+" "+
                 c.getAmount()+" "+d.getAmount());
         b.connectTo(c);
@@ -41,5 +37,4 @@ class ContainerApplicationTests {
         System.out.println(a.getAmount()+" "+b.getAmount()+" "+
                 c.getAmount()+" "+d.getAmount());
     }
-
 }

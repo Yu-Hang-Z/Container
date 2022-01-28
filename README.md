@@ -11,6 +11,13 @@
 
 # 延伸阅读
 
+第一章推荐书籍
+
+1. Steve McConnell的《代码大全》
+2. Diomidis Spinellis的《代码质量》
+3. Stephen H. Kan的《软件质量工程的度量与模型》
+4. Christopher W. H. Davis的《敏捷度量实战：如何度量并改进团队绩效》
+
 # 摘录来自
 [你真的会写代码吗-2021]
 [意] 马尔科 • 法埃拉（Marco.Faella）译者：雷威 李强
