@@ -47,4 +47,34 @@ public class Container {
             g[i].x = g[i].x + y;
         }
     }
+
+    /**
+     *
+     * @param c 连接的容器
+     */
+    public void connectTo(Container c){
+        // 合并后，每个容器的水量
+        double z = (x*n + c.x*c.n)/(n+c.n);
+        //变量第一组中的每个容器
+        for (int i = 0; i < n; i++){
+            //遍历第二组中的每个容器
+            for (int j = 0; j < c.n; j++) {
+                //将c.g[j]添加到g[i]组中
+                g[i].g[n+j] = c.g[j];
+                //将g[i]添加到c.g[j]组中
+                c.g[j].g[c.n+i] = g[i];
+            }
+            n += c.n;
+
+            for (Container container : g){
+                if (container == null) {
+                    break;
+                }
+                container.n = n;
+                container.x = z;
+            }
+
+        }
+
+    }
 }
