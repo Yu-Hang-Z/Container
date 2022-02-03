@@ -28,10 +28,17 @@ public class Container {
         group.add(this);
     }
 
+    /**
+     * 获取容器中的水量
+     * @return 容器中的水量
+     */
     public double getAmount() {
         return amount;
     }
 
+    /**
+     * 向容器中添加水
+     */
     public void addWater(double amount){
         double amountPerContainer = amount /group.size();
         for (Container container : group){
